@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio on plumy devlog</title>
+    <link>//localhost:1313/tags/portfolio/</link>
+    <description>Recent content in Portfolio on plumy devlog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Mar 2026 18:00:00 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fuzin: Terminal Paket Yönetiminde Fuzzy-Search Devrimi</title>
+      <link>//localhost:1313/posts/fuzin/</link>
+      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
+      <guid>//localhost:1313/posts/fuzin/</guid>
+      <description>🚀 Proje Hakkında Fuzin, farklı işletim sistemlerindeki paket yöneticilerini (apt, pacman, brew, vb.) ezberleme zahmetinden kurtaran, fzf tabanlı interaktif bir terminal aracıdır. Bir siber güvenlik meraklısı ve fizik öğrencisi olarak, sistem yönetimini ne kadar hızlı ve otomatize yaparsak, asıl teknik detaylara o kadar odaklanabiliriz mantığıyla bu aracı geliştirdim.&#xA;📸 Demolar Fuzin&amp;rsquo;in farklı platformlardaki çalışma performansına göz atın:&#xA;Linux (Debian/Arch) macOS (Homebrew) ✨ Öne Çıkan Özellikler Otomatik Algılama: Sisteminizde hangi paket yöneticisi varsa (apt, dnf, pacman, zypper, brew) onu otomatik olarak tespit eder.</description>
+    </item>
+  </channel>
+</rss>

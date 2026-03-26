@@ -1,0 +1,34 @@
+:root {
+  --background: #141415 !important;
+  --foreground: #cdcdcd !important;
+  --selection-background: #252530 !important;
+
+  /* color5: #bb9dbd  */
+  --bright-purple: #bb9dbd !important;
+
+  --color-0: #252530 !important;
+  --color-1: #d8647e !important; /* Red */
+  --color-2: #7fa563 !important; /* Green */
+  --color-3: #f3be7c !important; /* Yellow */
+  --color-4: #6e94b2 !important; /* Blue */
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+.container {
+  margin: 0 auto !important;
+  max-width: 860px !important;
+  padding: 0 20px !important;
+}
+
+a:hover {
+  color: #99b782 !important;
+}
+
+::selection {
+  background: var(--selection-background);
+  color: #cdcdcd !important;
+}

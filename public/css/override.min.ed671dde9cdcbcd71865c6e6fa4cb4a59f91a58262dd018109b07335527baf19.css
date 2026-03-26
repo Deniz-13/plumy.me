@@ -1,0 +1,1 @@
+:root{--background:#141415;--foreground:#cdcdcd;--selection-background:#252530;--bright-purple:#bb9dbd;--color-0:#252530;--color-1:#d8647e;--color-2:#7fa563;--color-3:#f3be7c;--color-4:#6e94b2}body{background-color:var(--background)!important;color:var(--foreground)!important}a:hover{color:#99b782!important}::selection{background:var(--selection-background);color:#cdcdcd}

@@ -1,0 +1,38 @@
+:root {
+  --theme: #bb9dbd !important; /* Tema vurgusu: Senin Mor Rengin */
+  --accent: #bb9dbd !important;
+}
+
+/* Arka plan ve genel yazı rengini zorla */
+body {
+  background: #141415 !important;
+  color: #cdcdcd !important;
+}
+
+/* Kod bloklarının (siyah kutuların) arka planı */
+.post-content code {
+  background: #252530 !important;
+}
+
+/* Linklerin üzerine gelinceki senin Yeşil Rengin */
+a:hover {
+  color: #7fa563 !important;
+}
+
+/* Ana konteyneri ortala ve sağdaki dikey çizgiyi kaldır */
+.container {
+  margin: 0 auto !important;
+  max-width: 900px !important; /* Genişliği kendine göre artırıp azaltabilirsin */
+  border-right: none !important; /* Sağdaki çizgiyi yok eder */
+}
+
+/* Sayfa içeriğinin sağındaki gereksiz boşlukları/çizgileri sıfırla */
+.content {
+  border-right: none !important;
+}
+
+/* Üstteki ||||| şeklindeki ayraçları gizlemek istersen (opsiyonel) */
+/* Eğer o yatay çizgileri seviyorsan bu bloğu silebilirsin */
+.header__right {
+  display: none !important;
+}

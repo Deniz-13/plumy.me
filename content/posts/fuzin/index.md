@@ -1,51 +1,39 @@
 ---
-title: "Fuzin: Terminal Paket Yönetiminde Fuzzy-Search Devrimi"
+title: "Fuzin: FZF wrapper for package managers."
 date: 2026-03-24T18:00:00+03:00
 draft: false
-description: "Bash ve fzf kullanarak geliştirdiğim, Linux ve macOS paket yöneticilerini tek bir interaktif arayüzde birleştiren wrapper projem."
-tags: ["bash", "linux", "macos", "fzf", "portfolio", "automation"]
+description: "Tired of searching google if a package exist in my distro or what it's name is."
+tags: ["bash", "linux", "package manager", "macos", "fzf"]
 toc: true
 ---
 
-## 🚀 Proje Hakkında
+## About the project
 
-**Fuzin**, farklı işletim sistemlerindeki paket yöneticilerini (`apt`, `pacman`, `brew`, vb.) ezberleme zahmetinden kurtaran, `fzf` tabanlı interaktif bir terminal aracıdır. Bir siber güvenlik meraklısı ve fizik öğrencisi olarak, sistem yönetimini ne kadar hızlı ve otomatize yaparsak, asıl teknik detaylara o kadar odaklanabiliriz mantığıyla bu aracı geliştirdim.
+I am a chronic distro-hopper. Every time I try to install a package in a distro I have to search either if it exist or what its name is. I've been using bash aliases for using fzf withthe package manager at the time. But as I've said earlier, I'm a distro-hopper. I always change my configs and always forget to bring the alias with me. So I wrote Fuzin to automate my fzf aliases. Even if I'm using Arch, Debian or Mac doesn't matter I'm automatically inside fzf searching for packages.
 
----
-
-## 📸 Demolar
-
-Fuzin'in farklı platformlardaki çalışma performansına göz atın:
-
-|      **Linux (Debian/Arch)**      |       **macOS (Homebrew)**        |
-| :-------------------------------: | :-------------------------------: |
-| ![Linux Demo](img/linux-demo.gif) | ![macOS Demo](img/macos-demo.gif) |
+Fuzin reduced my package installation process quite a bit. I can search packages and even see the package description without leaving my terminal(which I hate doing). If I'm using Arch for example and the package I'm looking for doesn't exist, I can search the AUR. Fuzin can also uninstall packages from my distro. I can seach and remove any package I want. Enough of the talking. You can see Fuzin in action below.
 
 ---
 
-## ✨ Öne Çıkan Özellikler
+## Demo
 
-- **Otomatik Algılama:** Sisteminizde hangi paket yöneticisi varsa (`apt`, `dnf`, `pacman`, `zypper`, `brew`) onu otomatik olarak tespit eder.
-- **Çoklu Seçim:** `TAB` tuşu ile birden fazla paketi aynı anda işaretleyip toplu kurulum yapabilirsiniz.
-- **Canlı Önizleme:** Paketleri yüklemeden önce açıklamalarını ve versiyonlarını split-screen (bölünmüş ekran) üzerinden inceleyebilirsiniz.
-- **AUR Entegrasyonu:** Arch Linux kullanıcıları için resmi depoda bulunmayan paketleri otomatik olarak AUR (`yay` veya `paru`) üzerinden arar.
-- **Sıfır Bağımlılık:** Sadece bir Bash scriptidir. Eğer sisteminizde `fzf` yoksa, Fuzin bunu algılar ve sizin için kurmayı teklif eder.
+![Linux Demo](img/linux-demo.gif)
+
+## Features I like about Fuzin
+
+- **Portable:** Sisteminizde hangi paket yöneticisi varsa (`apt`, `dnf`, `pacman`, `zypper`, `brew`) onu otomatik olarak tespit eder.
+- **Multi Selection:** `TAB` tuşu ile birden fazla paketi aynı anda işaretleyip toplu kurulum yapabilirsiniz.
+- **Preview Package Descriptions:** Paketleri yüklemeden önce açıklamalarını ve versiyonlarını split-screen (bölünmüş ekran) üzerinden inceleyebilirsiniz.
+- **AUR Integration:** Arch Linux kullanıcıları için resmi depoda bulunmayan paketleri otomatik olarak AUR (`yay` veya `paru`) üzerinden arar.
 
 ---
 
-## 🛠 Kurulum (Installation)
-
-Terminalinizden şu komutları sırasıyla çalıştırarak kurulumu tamamlayabilirsiniz:
+## Installation
 
 ```bash
-# Repoyu klonla
-git clone [https://github.com/Deniz-13/fuzin.git](https://github.com/Deniz-13/fuzin.git)
+git clone https://github.com/Deniz-13/fuzin.git
 cd fuzin
-
-# Çalıştırma yetkisi ver
 chmod +x fuzin
-
-# Sisteme global olarak tanıt (Önerilen)
 sudo mv fuzin /usr/local/bin/fuzin
 ```
 

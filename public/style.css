@@ -1,17 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+
 :root {
-  --theme: #bb9dbd !important; /* Tema vurgusu: Senin Mor Rengin */
-  --accent: #bb9dbd !important;
+  --theme: #aeaed1 !important; /* Tema vurgusu: Senin Mor Rengin */
+  --accent: #bebeda !important;
 }
 
 /* Arka plan ve genel yazı rengini zorla */
 body {
   background: #141415 !important;
   color: #cdcdcd !important;
+  font-family: "JetBrains Mono", monospace !important;
 }
 
 /* Kod bloklarının (siyah kutuların) arka planı */
 .post-content code {
   background: #252530 !important;
+}
+
+code,
+pre {
+  font-family: "JetBrains Mono", monospace !important;
 }
 
 /* Linklerin üzerine gelinceki senin Yeşil Rengin */
@@ -35,4 +43,76 @@ a:hover {
 /* Eğer o yatay çizgileri seviyorsan bu bloğu silebilirsin */
 .header__right {
   display: none !important;
+}
+
+/* Post kartı */
+.post {
+  background: #252530ff !important;
+  padding: 16px 20px !important;
+  margin-bottom: 12px !important;
+  border-radius: 4px !important;
+}
+
+/* Başlık altındaki çizgiyi kaldır */
+.post-title {
+  border-bottom: none !important;
+  padding-bottom: 0px !important;
+}
+
+.post-title::after {
+  border-bottom: none !important;
+}
+
+/* Başlık font boyutunu küçült */
+.post-title a {
+  font-size: 1rem !important;
+  border-bottom: none !important;
+}
+
+/* Meta bilgileri (tarih, tag) küçült */
+.post-meta {
+  font-size: 0.85rem !important;
+  margin-bottom: 0px !important;
+}
+
+/* Özet yazısını küçült */
+.post-content p {
+  font-size: 0.85rem !important;
+  margin-top: 10px !important;
+  margin: 6px 0 !important;
+}
+
+.post-content {
+  font-size: 0.9rem !important;
+  margin-top: 10px !important;
+  margin: 6px 0 !important;
+}
+
+.post h2,
+.post h3 {
+  margin-bottom: 2px !important;
+}
+.post-tags {
+  font-size: 0.8rem !important;
+  margin-bottom: 5px !important;
+}
+.header--menu--inline {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+.header--menu--inline a {
+  font-size: 0.85rem !important;
+  text-decoration: none !important;
+}
+
+.header__inner {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+a.button.inline {
+  font-size: 0.8rem !important;
 }

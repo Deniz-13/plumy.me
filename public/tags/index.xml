@@ -9,13 +9,6 @@
     <lastBuildDate>Tue, 24 Mar 2026 18:00:00 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Bash</title>
       <link>http://localhost:1313/tags/bash/</link>
       <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
@@ -44,10 +37,10 @@
       <description></description>
     </item>
     <item>
-      <title>Portfolio</title>
-      <link>http://localhost:1313/tags/portfolio/</link>
+      <title>Package Manager</title>
+      <link>http://localhost:1313/tags/package-manager/</link>
       <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/portfolio/</guid>
+      <guid>http://localhost:1313/tags/package-manager/</guid>
       <description></description>
     </item>
   </channel>

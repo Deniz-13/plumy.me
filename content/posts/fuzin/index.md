@@ -1,9 +1,9 @@
 ---
 title: "Fuzin: FZF wrapper for package managers."
-date: 2026-03-24T18:00:00+03:00
+date: 2026-03-29
 draft: false
-description: "Tired of searching google if a package exist in my distro or what it's name is."
-tags: ["bash", "linux", "package manager", "macos", "fzf"]
+description: "Tired of searching google if a package exist or what it's name is in the distro I'm using."
+tags: ["bash", "linux", "package manager", "brew", "pacman", "apt", "fzf"]
 toc: true
 ---
 
@@ -17,14 +17,16 @@ Fuzin reduced my package installation process quite a bit. I can search packages
 
 ## Demo
 
-![Linux Demo](img/linux-demo.gif)
+<video controls playsinline style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+  <source src="img/demo.mp4" type="video/mp4">
+</video>
 
 ## Features I like about Fuzin
 
-- **Portable:** Sisteminizde hangi paket yöneticisi varsa (`apt`, `dnf`, `pacman`, `zypper`, `brew`) onu otomatik olarak tespit eder.
-- **Multi Selection:** `TAB` tuşu ile birden fazla paketi aynı anda işaretleyip toplu kurulum yapabilirsiniz.
-- **Preview Package Descriptions:** Paketleri yüklemeden önce açıklamalarını ve versiyonlarını split-screen (bölünmüş ekran) üzerinden inceleyebilirsiniz.
-- **AUR Integration:** Arch Linux kullanıcıları için resmi depoda bulunmayan paketleri otomatik olarak AUR (`yay` veya `paru`) üzerinden arar.
+- **Portable:** Automatically detects the package manager whether it be pacman, apt, dnf, zypper or even brew.
+- **Multi Selection:** Select multiple packages to install or remove by pressing `TAB`.
+- **Preview Package Descriptions:** Show brief descriptions of packages provided by the package manager without leaving the terminal.
+- **AUR Integration:** When using pacman, search for AUR(using `yay` or `paru`) if a package doesn't exist. Added `-y or --yay` for yay and `-p or --paru` for paru AUR helpers.
 
 ---
 
@@ -39,42 +41,32 @@ sudo mv fuzin /usr/local/bin/fuzin
 
 ---
 
-## ⌨️ Kullanım Rehberi (Usage)
+## Usage
 
-Fuzin, karmaşık parametreler yerine basit flagler ile çalışır:
+### 1. Searching and installing packages.
 
-### 1. Paket Arama ve Yükleme
-
-Herhangi bir argüman vermeden çalıştırdığınızda varsayılan olarak "Install" modunda açılır.
+The default mode of the program is install mode.
 
 ```bash
-fuzin           # İnteraktif yükleme modunu başlatır
-fuzin -i        # Aynı işlevi görür (--install)
+fuzin
+fuzin -i                # enters install mode.
 ```
 
-### 2. Paket Kaldırma
+**IF** you're using Pacman and the package you are looking for doesn't exist, press `ESC` and Fuzin will prompt you to search in AUR.
 
-Sisteminizde yüklü olan paketleri listeleyip seçerek silebilirsiniz.
+### 2. AUR helpers
 
 ```bash
-fuzin -r        # Yüklü paketleri arayıp silmenizi sağlar (--remove)
+fuzin -y or --yay       # Select yay to search packages.
+fuzin -p or --paru      # Select paru to search packages.
 ```
 
-### 3. Sistem Güncelleme
+### 3. Removing packages
 
-Tüm paket yöneticisi depolarını tek komutla günceller.
-
-```bash
-fuzin -u        # Paket listelerini ve sistemi günceller (--update)
-```
-
-### 4. Yardım ve Versiyon
+You can search and remove packages that are installed on your system.
 
 ```bash
-fuzin -h        # Yardım menüsünü görüntüler (--help)
-fuzin -v        # Mevcut versiyonu gösterir (--version)
+fuzin -r                # Search and remove installed packages.
 ```
 
 ---
-
-> **Gelecek Planları:** İlerleyen aşamalarda ağ analizi ve siber güvenlik araçlarını (Nmap, Wireshark, Metasploit vb.) tek tıkla kurabilen özel "toolkit" listeleri eklemeyi planlıyorum.

@@ -5,42 +5,56 @@
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on plumy devlog</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 24 Mar 2026 18:00:00 +0300</lastBuildDate>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apt</title>
+      <link>http://localhost:1313/tags/apt/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/apt/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bash</title>
       <link>http://localhost:1313/tags/bash/</link>
-      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brew</title>
+      <link>http://localhost:1313/tags/brew/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/brew/</guid>
       <description></description>
     </item>
     <item>
       <title>Fzf</title>
       <link>http://localhost:1313/tags/fzf/</link>
-      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/fzf/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
       <link>http://localhost:1313/tags/linux/</link>
-      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Macos</title>
-      <link>http://localhost:1313/tags/macos/</link>
-      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>Package Manager</title>
       <link>http://localhost:1313/tags/package-manager/</link>
-      <pubDate>Tue, 24 Mar 2026 18:00:00 +0300</pubDate>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/package-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pacman</title>
+      <link>http://localhost:1313/tags/pacman/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pacman/</guid>
       <description></description>
     </item>
   </channel>

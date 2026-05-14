@@ -8,13 +8,60 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  tr:
+    languageName: "Turkce"
+    languageCode: tr-TR
+    weight: 1
+    title: plumy devlog
+    params:
+      homeInfoParams:
+        Title: "Selam, ben Deniz."
+        Content: |
+          Devlog'uma hoş geldin. Öğrendiğim ya da yaptığım şeyleri burada belgeliyorum. Ağırlıklı olarak (ama sadece değil) siber güvenlik konularına odaklanıyorum.
+          Programlar yazarak ve problem çözerek pratik deneyim kazanmaya çalışıyorum. Burada CTF writeup'larımı, öğrendiğim teknolojiler ve tekniklere dair notlarımı, proje demolarımı ve özgür/açık kaynak yazılımları bulabilirsin.
+    menu:
+      main:
+        - identifier: tags
+          name: kategoriler
+          url: tags/
+          weight: 10
+        - identifier: about
+          name: hakkımda
+          url: about/
+          weight: 20
+
+  en:
+    languageName: "English"
+    languageCode: en-US
+    weight: 2
+    title: plumy devlog
+    params:
+      homeInfoParams:
+        Title: "Hi, I'm Deniz."
+        Content: |
+          Welcome to my devlog. I document whatever I learn or build. Mainly focusing on (but not limited to) cybersecurity related topics.
+          I learn by building programs and solving problems to gather hands-on experience. You'll find my CTF writeups, notes on technologies and techniques I learn along the way, project demos and free(as in freedom) and open source software.
+    menu:
+      main:
+        - identifier: tags
+          name: categories
+          url: tags/
+          weight: 10
+        - identifier: about
+          name: about me
+          url: about/
+          weight: 20
+
 minify:
   disableXML: true
   minifyOutput: true
 
 params:
   env: production
-  title: plumy's devlog
   description: "siber güvenlik, araçlar ve açık kaynak üzerine notlar"
   keywords: [Blog, Siber Güvenlik, CTF, Portfolio]
   author: plumy
@@ -36,28 +83,19 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
-
+  mainSections:
+    - posts
   label:
     text: "/home/plumy"
-
-  homeInfoParams:
-    Title: "Hi, I'm Deniz."
-    Content: |
-      Welcome to my devlog. I document whatever I learn or build. Mainly focusing on (but not limited to) cybersecurity related topics.
-
-      I learn by building programs and solving problems to gather hands-on experience. You'll find my CTF writeups, notes on technologies and techniques I learn along the way, project demos and free(as in freedom) and open source software.
-
   socialIcons:
     - name: github
       url: "https://github.com/Deniz-13"
     - name: linkedin
       url: "https://linkedin.com/in/deniz-ince-"
-
   cover:
     hidden: true
     hiddenInList: true
     hiddenInSingle: true
-
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -67,17 +105,6 @@ params:
     minMatchCharLength: 0
     limit: 10
     keys: ["title", "permalink", "summary", "content"]
-
-menu:
-  main:
-    - identifier: tags
-      name: categories
-      url: /tags/
-      weight: 10
-    - identifier: about
-      name: about me
-      url: /about/
-      weight: 20
 
 pygmentsUseClasses: true
 markup:

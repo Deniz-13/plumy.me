@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on plumy devlog</title>
+    <link>http://localhost:1313/tr/posts/</link>
+    <description>Recent content in Posts on plumy devlog</description>
+    <generator>Hugo</generator>
+    <language>tr-TR</language>
+    <lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CCNA</title>
+      <link>http://localhost:1313/tr/posts/ccna/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tr/posts/ccna/</guid>
+      <description>&lt;p&gt;Cisco Certified Network Associate (CCNA) sınav hazırlık notları. Ders günlerine göre düzenlenmiştir; konular sırayla okunmak üzere tasarlandı.&lt;/p&gt;
+&lt;h2 id=&#34;konular&#34;&gt;Konular&lt;/h2&gt;
+&lt;h3 id=&#34;temeller&#34;&gt;Temeller&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./05-ocak/&#34;&gt;05 Ocak — Switch temelleri, IOS modları, parolalar, SSH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./07-ocak/&#34;&gt;07 Ocak — Router temelleri, VLAN, IPv6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;anahtarlama-switching&#34;&gt;Anahtarlama (Switching)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./12-ocak/&#34;&gt;12 Ocak — 802.1Q, DTP, Inter-VLAN Routing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./14-ocak/&#34;&gt;14 Ocak — STP, EtherChannel, DHCP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;referans&#34;&gt;Referans&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./subnetting/&#34;&gt;IPv4 Subnetting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -5,36 +5,36 @@
     <loc>http://localhost:1313/tr/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
+                hreflang="tr-TR"
                 href="http://localhost:1313/tr/categories/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
+                hreflang="tr-TR"
                 href="http://localhost:1313/tr/"
                 />
   </url><url>
     <loc>http://localhost:1313/tr/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-US"
                 href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="tr"
+                hreflang="tr-TR"
                 href="http://localhost:1313/tr/tags/"
                 />
   </url>

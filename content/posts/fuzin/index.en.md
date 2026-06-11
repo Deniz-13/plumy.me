@@ -1,32 +1,36 @@
 ---
-title: "Fuzin: FZF wrapper for package managers."
+title: "Fuzin: An FZF Wrapper for Package Managers"
 date: 2026-03-29
 draft: false
-description: "Tired of searching google if a package exist or what it's name is in the distro I'm using."
+description: "A small shell tool that lets me search, install, and remove packages with fzf across different package managers."
 tags: ["bash", "linux", "package manager", "brew", "pacman", "apt", "fzf"]
-toc: true
+ShowToc: true
+TocOpen: true
 ---
 
 ## About the project
 
-I am a chronic distro-hopper. Every time I try to install a package in a distro I have to search either if it exist or what its name is. I've been using bash aliases for using fzf withthe package manager at the time. But as I've said earlier, I'm a distro-hopper. I always change my configs and always forget to bring the alias with me. So I wrote Fuzin to automate my fzf aliases. Even if I'm using Arch, Debian or Mac doesn't matter I'm automatically inside fzf searching for packages.
+I am a chronic distro-hopper. Every time I move between systems, I forget small package-management details: whether a package exists, what it is called on that distro, or which command I used last time.
 
-Fuzin reduced my package installation process quite a bit. I can search packages and even see the package description without leaving my terminal(which I hate doing). If I'm using Arch for example and the package I'm looking for doesn't exist, I can search the AUR. Fuzin can also uninstall packages from my distro. I can seach and remove any package I want. Enough of the talking. You can see Fuzin in action below.
+For a while, I solved this with small bash aliases that combined package-manager search commands with `fzf`. The problem was that I kept changing distros, changing configs, and forgetting to bring those aliases with me. Fuzin is my attempt to make that workflow portable.
+
+Fuzin detects the available package manager and opens an interactive `fzf` search. It works with package managers like `pacman`, `apt`, `dnf`, `zypper`, and `brew`. On Arch-based systems, it can also fall back to AUR helpers like `yay` or `paru`.
 
 ---
 
 ## Demo
 
 <video controls playsinline style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
-  <source src="img/demo.mp4" type="video/mp4">
+  <source src="/posts/fuzin/img/demo.mp4" type="video/mp4">
 </video>
 
-## Features I like about Fuzin
+## What I Use It For
 
-- **Portable:** Automatically detects the package manager whether it be pacman, apt, dnf, zypper or even brew.
-- **Multi Selection:** Select multiple packages to install or remove by pressing `TAB`.
-- **Preview Package Descriptions:** Show brief descriptions of packages provided by the package manager without leaving the terminal.
-- **AUR Integration:** When using pacman, search for AUR(using `yay` or `paru`) if a package doesn't exist. Added `-y or --yay` for yay and `-p or --paru` for paru AUR helpers.
+- **Portable package search:** Fuzin detects the package manager and opens the right search flow.
+- **Multi-select installs/removals:** I can select more than one package with `TAB`.
+- **Package previews:** I can read package descriptions without leaving the terminal.
+- **AUR fallback:** On Arch-based systems, I can search the AUR with `yay` or `paru` when the package is not in the official repositories.
+- **Remove mode:** I can search installed packages and remove the ones I select.
 
 ---
 
@@ -43,30 +47,30 @@ sudo mv fuzin /usr/local/bin/fuzin
 
 ## Usage
 
-### 1. Searching and installing packages.
+### 1. Search and install packages
 
-The default mode of the program is install mode.
+The default mode is install mode.
 
 ```bash
 fuzin
 fuzin -i                # enters install mode.
 ```
 
-**IF** you're using Pacman and the package you are looking for doesn't exist, press `ESC` and Fuzin will prompt you to search in AUR.
+If you are using `pacman` and the package does not exist in the official repositories, press `ESC` and Fuzin will ask whether you want to search the AUR.
 
 ### 2. AUR helpers
 
 ```bash
-fuzin -y or --yay       # Select yay to search packages.
-fuzin -p or --paru      # Select paru to search packages.
+fuzin -y or --yay       # use yay for AUR search
+fuzin -p or --paru      # use paru for AUR search
 ```
 
-### 3. Removing packages
+### 3. Remove packages
 
-You can search and remove packages that are installed on your system.
+You can also search and remove packages that are already installed on your system.
 
 ```bash
-fuzin -r                # Search and remove installed packages.
+fuzin -r                # search and remove installed packages
 ```
 
 ---

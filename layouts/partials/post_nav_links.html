@@ -1,0 +1,61 @@
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- if eq .Section "homelab" }}
+  {{- $pages = where .CurrentSection.RegularPages "Lang" .Lang }}
+{{- end }}
+
+{{- if eq .Section "homelab" }}
+  {{- $pages = sort $pages "Date" "asc" }}
+{{- else }}
+  {{- $pages = sort $pages "Date" "desc" }}
+{{- end }}
+
+{{- $position := 0 }}
+{{- range $index, $page := $pages }}
+  {{- if eq $page.RelPermalink $.RelPermalink }}
+    {{- $position = add $index 1 }}
+  {{- end }}
+{{- end }}
+
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+{{- $prevPage := $pages.Next . }}
+{{- $nextPage := $pages.Prev . }}
+{{- if ne .Section "homelab" }}
+  {{- $prevPage = $pages.Prev . }}
+  {{- $nextPage = $pages.Next . }}
+{{- end }}
+<nav class="paginav{{ if eq .Section "homelab" }} paginav-series{{ end }}" aria-label="Post navigation">
+  {{- if and (eq .Section "homelab") (gt $position 0) }}
+    {{- $seriesLabel := "Homelab Series" }}
+    {{- $unitLabel := "Part" }}
+    {{- $joiner := "of" }}
+    {{- if eq .Lang "tr" }}
+      {{- $seriesLabel = "Homelab Serisi" }}
+      {{- $unitLabel = "Bölüm" }}
+      {{- $joiner = "/" }}
+    {{- end }}
+    <div class="paginav-series-meta">
+      <span>{{ $seriesLabel }}</span>
+      <span>{{ $unitLabel }} {{ $position }} {{ $joiner }} {{ len $pages }}</span>
+    </div>
+  {{- end }}
+  <div class="paginav-links">
+  {{- with $prevPage }}
+  <a class="prev" href="{{ .Permalink }}">
+    <span class="title paginav-kicker">← {{ i18n "prev_page" }}</span>
+    <span class="paginav-label">{{- .Name -}}</span>
+  </a>
+  {{- else }}
+  <span class="paginav-placeholder" aria-hidden="true"></span>
+  {{- end }}
+  {{- with $nextPage }}
+  <a class="next" href="{{ .Permalink }}">
+    <span class="title paginav-kicker">{{ i18n "next_page" }} →</span>
+    <span class="paginav-label">{{- .Name -}}</span>
+  </a>
+  {{- else }}
+  <span class="paginav-placeholder" aria-hidden="true"></span>
+  {{- end }}
+  </div>
+</nav>
+{{- end }}

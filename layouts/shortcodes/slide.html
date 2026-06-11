@@ -1,0 +1,29 @@
+{{/*
+  Hugo Slide Shortcode — slideshow.html içinde kullanılır
+  Parametreler:
+    src     : Resim yolu (zorunlu)
+    caption : Açıklama metni (opsiyonel) — frame altında gösterilir
+    alt     : img alt metni (opsiyonel)
+*/}}
+{{- $src := .Get "src" -}}
+{{- $resolvedSrc := $src -}}
+{{- $isExternal := or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://") (strings.HasPrefix $src "data:") (strings.HasPrefix $src "#") -}}
+{{- if and (not $isExternal) (not (strings.HasPrefix $src "/")) -}}
+  {{- $base := .Page.RelPermalink -}}
+  {{- with .Site.LanguagePrefix -}}
+    {{- if strings.HasPrefix $base . -}}
+      {{- $base = strings.TrimPrefix . $base -}}
+      {{- if not (strings.HasPrefix $base "/") -}}
+        {{- $base = printf "/%s" $base -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $resolvedSrc = path.Join (path.Dir $base) $src -}}
+{{- end -}}
+<div class="hg-slide" data-caption="{{ .Get "caption" }}">
+  <img
+    src="{{ $resolvedSrc }}"
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ with .Get "caption" }}{{ . }}{{ else }}Slayt görseli{{ end }}{{ end }}"
+    loading="lazy"
+  >
+</div>
